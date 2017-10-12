@@ -1,1 +1,6 @@
-<h1>TEST HOME PAGE</h1>
+<section ng-controller="HomeCtrl as room">
+<h1>Rooms</h1>
+<ul>
+  <li ng-repeat="room in room.rooms">{{ room.$value }}</li>
+</ul>
+</section>
