@@ -1,6 +1,14 @@
 <section ng-controller="HomeCtrl as room">
-<h1>Rooms</h1>
-<ul>
-  <li ng-repeat="room in room.rooms">{{ room.$value }}</li>
-</ul>
+  <h1>Rooms</h1>
+
+  <!-- New Chat Button -->
+	<button type="button" class="btn btn-default" ng-click="room.addRoom()">
+		<span class="ion-plus-round">
+		 new chat room</span>
+	 </button>
+
+
+    <ul>
+      <li ng-repeat="room in room.rooms">{{ room.$value }}</li>
+    </ul>
 </section>
