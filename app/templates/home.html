@@ -1,14 +1,52 @@
-<section ng-controller="HomeCtrl as room">
-  <h1>Rooms</h1>
 
-  <!-- New Chat Button -->
-	<button type="button" class="btn btn-default" ng-click="room.addRoom()">
-		<span class="ion-plus-round">
-		 new chat room</span>
-	 </button>
+<div class="container">
+
+  <section ng-controller="HomeCtrl as room">
+
+    <!-- Display Messages -->
+    <div class="messages-container">
+      <div>
+        <h3>
+          Chat with: <span class="nameOfUser">{{ room.currentRoom.$value }}</span>
+        </h3>
+      </div>
+
+      <div class="messagesBody" ng-repeat="message in room.messages">
+          <div class="username">
+            username:  {{ message.username }}
+          </div>
+          <div class="userMessage">
+            message:  {{ message.content }}
+          </div>
+          <div class="timeStamp">
+            sent at:  {{ message.sentAt | date: "shortTime" }}
+          </div>
+      </div>
+    </div>
+
+    <!-- List of Rooms -->
+    <nav class="rooms-list">
+    <h4>+Rooms+</h4>
+
+    <div class="chatRooms" ng-repeat="room in room.rooms">
+      <div class="buttonArea" ng-click="$parent.room.setCurrentRoom(room)">
+          {{ room.$value }}
+      </div>
+    </div>
+
+    <!-- New Chat Button -->
+    <br>
+      <button type="button" class="btn btn-default" ng-click="room.addRoom()">
+      <span class="ion-plus-round">new chat room</span>
+      </button>
+    </br>
+    </nav>
+
+  </section>
+</div>
 
 
-    <ul>
-      <li ng-repeat="room in room.rooms">{{ room.$value }}</li>
-    </ul>
-</section>
+
+
+
+</div>

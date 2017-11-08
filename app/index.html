@@ -2,18 +2,18 @@
 <html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
 </head>
 <body>
-    <div>
-      <div>
-        <h1>Bloc Chat</h1>
+
+        <header>Bloc Chat</header>
         <ui-view></ui-view>
-      </div>
-      <div>Messages will go here</div>
-    <div>
+        <footer><a href="mailto:mattfreitas415@gmail.com">Matt Freitas</a> - 2017</footer>
+
 
 
     <!-- Angular -->
@@ -50,5 +50,6 @@
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/controllers/ModalCtrl.js"></script>
     <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/services/Message.js"></script>
 </body>
 </html>

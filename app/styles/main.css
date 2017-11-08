@@ -1,0 +1,53 @@
+div.container {
+
+    width: 100%;
+}
+
+div.container.ng-scope {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: x-large;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+    font-family: 'Saira Extra Condensed', sans-serif;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.messages-container{
+    float: right;
+    width: 67%;
+    height: 800px;
+}
+.rooms-list {
+    float: left;
+}
