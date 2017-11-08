@@ -30,7 +30,9 @@
 
     <div class="chatRooms" ng-repeat="room in room.rooms">
       <div class="buttonArea" ng-click="$parent.room.setCurrentRoom(room)">
+        <a ng-href="/">
           {{ room.$value }}
+        </a>
       </div>
     </div>
 
