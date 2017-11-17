@@ -7,9 +7,15 @@
     <div class="messages-container">
       <div>
         <h3>
-          Chat with: <span class="nameOfUser">{{ room.currentRoom.$value }}</span>
+          Room: <span class="nameOfUser">{{ room.currentRoom.$value }}</span>
         </h3>
       </div>
+
+      <div>
+          <textarea ng-model="room.newMessage.content" id="textarea" placeholder="ermmm..." required></textarea>
+          <div class="sendMessage" ng-click="room.sendMessage()">Send</div>
+      </div>
+
 
       <div class="messagesBody" ng-repeat="message in room.messages">
           <div class="username">
